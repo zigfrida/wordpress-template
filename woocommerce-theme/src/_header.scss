@@ -1,0 +1,125 @@
+
+header {
+    position: fixed;
+    height: 60px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+
+    .menu_container {
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 6px;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 28px;
+        height: 2.5px;
+        background-color: black;
+        margin: 7px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+        transform: rotate(-45deg) translate(-7px, 5px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -7px);
+        transform: rotate(45deg) translate(-8px, -7px);
+    }
+
+    #menu_text {
+        margin-top: 10px;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+
+
+#sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding-top: 90px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-transform: uppercase;
+
+    .cross-link a, span {
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .cross-link a > span {
+        display:inline-block;
+        position:relative;
+        white-space: nowrap;
+        color: white;
+    }
+
+    .cross-link a > span:after {
+        content: '';
+        height: 1px;
+        width: 0%;
+        position: absolute;
+        top: 50%;
+        left: 110%;
+        background-color: white;
+        -webkit-transition: width 500ms, left 500ms;
+        -moz-transition: width 500ms, left 500ms;
+        -o-transition: width 500ms, left 500ms;
+        transition: width 500ms, left 500ms;
+    }
+
+    .cross-link a:hover > span:after {
+        width:120%;
+        left:-10%;
+        -webkit-transition: width 500ms;
+        -moz-transition: width 500ms;
+        -o-transition: width 500ms;
+        transition: width 500ms;
+        color: white;
+    }
+}
+
+.overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}

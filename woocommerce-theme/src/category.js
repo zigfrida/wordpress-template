@@ -18,9 +18,7 @@ function startLoad(){
         }
         cat_array.push(category);
     }
-
-    console.log(cat_array);
-
+    //console.log(cat_array);
 }
 
 function changeInfo(element){
@@ -74,26 +72,42 @@ function overlayShowRight() {
 }
 
 
-function determineOverflow(content, container){
-    let containerMetrics = container.getBoundingClientRect();
-    let containerMetricsRight = Math.floor(containerMetrics.right);
-    let containerMetricsLeft = Math.floor(containerMetrics.left);
+var bottomNavContents = jQuery("#bottom-navigation-contents");
 
-    let contentMetrics = content.getBoundingClientRect();
-    let contentMetricRight = Math.floor(contentMetrics.right);
-    let contentMetricLeft = Math.floor(contentMetrics.left);
+let limit = -750;
 
-    if(containerMetricsLeft > contentMetricLeft && containerMetricsRight < contentMetricRight) {
-        return "both";
-    } else if (contentMetricLeft < containerMetricsLeft) {
-        return "left";
-    } else if (contentMetricRight > containerMetricsRight){
-        return "right";
-    } else {
-        return "none";
+jQuery("#right-arrow").click(function(){
+    let move = widthToMove();
+    let currentPosition = parseInt(bottomNavContents.css("left"));
+    console.log(currentPosition);
+    if (currentPosition >= limit) {
+        bottomNavContents.stop(false, true).animate({ left: "-=" + move }, { duration: 400 })
     }
+});
+
+jQuery("#left-arrow").click(function () {
+    let move = widthToMove();
+    let currentPosition = parseInt(bottomNavContents.css("left"));
+    console.log(currentPosition);
+    if (currentPosition < 0) {
+        bottomNavContents.stop(false, true).animate({ left: "+=" + move }, { duration: 400 })
+    }
+});
+
+function widthToMove(){
+    let element = document.getElementsByClassName("cat-nav-link")[0];
+    let width = element.clientWidth;
+    let marginStyle = window.getComputedStyle(element);
+    let marginRight = parseInt(marginStyle.getPropertyValue('margin-right').split("px")[0]);
+    let marginLeft = parseInt(marginStyle.getPropertyValue('margin-left').split("px")[0]);
+    console.log(width + marginRight + marginLeft);
+    return width + marginRight + marginLeft;
 }
 
-let bottomNav = document.getElementById("bottom-navigation");
-let bottomNavContents = document.getElementById("bottom-navigation-contents");
-bottomNav.setAttribute("data-overflowing", determineOverflow(bottomNavContents, bottomNav));
+
+(function (){
+    // let numCategories = document.getElementsByClassName("cat-nav-link").length;
+    // let categoriesWidth = widthToMove();
+    // let nav = document.getElementById("bottom-navigation-contents");
+    // nav.style.width = (numCategories * categoriesWidth) + "px";
+})();

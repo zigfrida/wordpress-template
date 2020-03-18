@@ -8,7 +8,73 @@ body {
     margin-top: 60px;
     overflow: hidden;
 
+    #category-text {
+        overflow: hidden;
+        width: 0;
+    }
+
+    @keyframes slideNextHideAnimation {
+        from {
+            margin-left: calc(50% - 25vw);
+        }
+
+        to {
+            margin-left: 10vw;
+        }
+    }
+
+    @keyframes slideNextAnimation {
+        from {
+            margin-left: calc(100% - 25vw);
+        }
+
+        to {
+            margin-left: calc(50% - 25vw);
+        }
+    }
+
+    @keyframes slideNextHideReverse {
+        from {
+            margin-left: 10vw;
+        }
+
+        to {
+            margin-left: calc(50% - 25vw);
+        }
+    }
+
+    @keyframes slideNextReverse {
+        from {
+            margin-left: calc(50% - 25vw);
+        }
+
+        to {
+            margin-left: calc(100% - 25vw);
+        }
+    }
+
+    .runSlideNextAnimation {
+        animation: slideNextAnimation 0.6s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .runSlideNextHideAnimation {
+        animation: slideNextHideAnimation 0.9s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .runSlideNextReverseAnimation {
+        animation: slideNextReverse 0.9s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .runSlideNextHideReverseAnimation {
+        animation: slideNextHideReverse 0.6s ease;
+        animation-fill-mode: forwards;
+    }
+
     #category-info {
+        width: 50vw; //
         z-index: 100;
         padding-top: 20vh;
         color: rgb(25, 61, 179);
@@ -24,8 +90,8 @@ body {
             display: block;
             height: 150px;
             font-size: 20px;
-            width: 50vw;
-            margin-left: calc(50% - 25vw);
+            // width: 50vw; //
+            //margin-left: calc(50% - 25vw);  //
             word-wrap: break-word;
             overflow: hidden;
             //max-height: 150px;
@@ -66,15 +132,22 @@ body {
         bottom: 0;
         color: rgb(233, 34, 183);
 
+        position: fixed;
+        width: 100%;
+        margin-bottom: 70px;
+
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+        z-index: 9999;
 
         #bottom-navigation-contents {
             left: 0;
             float: left;
             overflow: hidden;
             width: calc(100% - 110px);
+
+            //overflow: auto;
 
             .cat-nav-link {
                 display: inline-block;
@@ -91,6 +164,10 @@ body {
                     padding-top: 6px;
                     float: right;
                 }
+            }
+
+            .active {
+                border-top: 1px solid rgb(99, 73, 248);
             }
         }
 
@@ -116,17 +193,21 @@ body {
 }
 
 @media only screen and (max-width: 520px) {
+
+    //Show 1 Cat
     #category-desc {
         width: 80vw !important;
         margin-left: calc(50% - 40vw) !important;
     }
 
-     .cat-nav-link { 
-         width: calc(100% - 50px) !important; //50px = margin
-     }
+    .cat-nav-link {
+        width: calc(100% - 50px) !important; //50px = margin
+    }
 }
 
-@media only screen and (min-width: 521px) and (max-width: 850px){
+@media only screen and (min-width: 521px) and (max-width: 850px) {
+
+    //Show 2 Cat
     #category-desc {
         width: 70vw !important;
         margin-left: calc(50% - 35vw) !important;
@@ -140,6 +221,7 @@ body {
 }
 
 @media only screen and (min-width: 851px) and (max-width: 1200px) {
+    //Show 3 Cat
 
     .cat-nav-link {
         width: calc(33.333% - 20px) !important;
@@ -149,6 +231,7 @@ body {
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    //Show 4 Cat
 
     .cat-nav-link {
         width: calc(25% - 40px) !important;
@@ -158,6 +241,7 @@ body {
 }
 
 @media only screen and (min-width: 1601px) {
+    //Show 5 Cat
 
     .cat-nav-link {
         width: calc(20% - 50px) !important;

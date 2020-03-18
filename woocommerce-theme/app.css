@@ -11194,7 +11194,121 @@ body {
   overflow: hidden;
 }
 
+#category-display #category-text {
+  overflow: hidden;
+  width: 0;
+}
+
+@-webkit-keyframes slideNextHideAnimation {
+  from {
+    margin-left: calc(50% - 25vw);
+  }
+
+  to {
+    margin-left: 10vw;
+  }
+}
+
+@keyframes slideNextHideAnimation {
+  from {
+    margin-left: calc(50% - 25vw);
+  }
+
+  to {
+    margin-left: 10vw;
+  }
+}
+
+@-webkit-keyframes slideNextAnimation {
+  from {
+    margin-left: calc(100% - 25vw);
+  }
+
+  to {
+    margin-left: calc(50% - 25vw);
+  }
+}
+
+@keyframes slideNextAnimation {
+  from {
+    margin-left: calc(100% - 25vw);
+  }
+
+  to {
+    margin-left: calc(50% - 25vw);
+  }
+}
+
+@-webkit-keyframes slideNextHideReverse {
+  from {
+    margin-left: 10vw;
+  }
+
+  to {
+    margin-left: calc(50% - 25vw);
+  }
+}
+
+@keyframes slideNextHideReverse {
+  from {
+    margin-left: 10vw;
+  }
+
+  to {
+    margin-left: calc(50% - 25vw);
+  }
+}
+
+@-webkit-keyframes slideNextReverse {
+  from {
+    margin-left: calc(50% - 25vw);
+  }
+
+  to {
+    margin-left: calc(100% - 25vw);
+  }
+}
+
+@keyframes slideNextReverse {
+  from {
+    margin-left: calc(50% - 25vw);
+  }
+
+  to {
+    margin-left: calc(100% - 25vw);
+  }
+}
+
+#category-display .runSlideNextAnimation {
+  -webkit-animation: slideNextAnimation 0.6s ease;
+          animation: slideNextAnimation 0.6s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#category-display .runSlideNextHideAnimation {
+  -webkit-animation: slideNextHideAnimation 0.9s ease;
+          animation: slideNextHideAnimation 0.9s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#category-display .runSlideNextReverseAnimation {
+  -webkit-animation: slideNextReverse 0.9s ease;
+          animation: slideNextReverse 0.9s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#category-display .runSlideNextHideReverseAnimation {
+  -webkit-animation: slideNextHideReverse 0.6s ease;
+          animation: slideNextHideReverse 0.6s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 #category-display #category-info {
+  width: 50vw;
   z-index: 100;
   padding-top: 20vh;
   color: #193db3;
@@ -11211,8 +11325,6 @@ body {
   display: block;
   height: 150px;
   font-size: 20px;
-  width: 50vw;
-  margin-left: calc(50% - 25vw);
   word-wrap: break-word;
   overflow: hidden;
 }
@@ -11249,9 +11361,13 @@ body {
 #category-display #bottom-navigation {
   bottom: 0;
   color: #e922b7;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 70px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  z-index: 9999;
 }
 
 #category-display #bottom-navigation #bottom-navigation-contents {
@@ -11276,6 +11392,10 @@ body {
   font-size: 14px;
   padding-top: 6px;
   float: right;
+}
+
+#category-display #bottom-navigation #bottom-navigation-contents .active {
+  border-top: 1px solid #6349f8;
 }
 
 #category-display #bottom-navigation #left-arrow {

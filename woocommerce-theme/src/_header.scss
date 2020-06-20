@@ -1,8 +1,7 @@
-
 header {
     position: fixed;
     height: 60px;
-    top: 0;
+    top: 20px;
     left: 0;
     right: 0;
     z-index: 9999;
@@ -10,6 +9,68 @@ header {
     text-transform: uppercase;
     background-color: transparent;
     color: white;
+
+    .navbar {
+        margin-right: 30px;
+
+        .navbar-header {
+            height: 50px;
+
+            a {
+                display: block;
+                color: $yellow;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: auto;
+            }
+
+            ul {
+                height: 100%;
+                padding-left: 20px;
+                padding-top: 5px;
+            }
+
+        }
+
+        .text {
+            text-transform: none;
+            // font-family: 'Muli',
+            //     sans-serif;
+            list-style-type: none;
+            border-bottom: 0;
+            text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
+            margin: 0;
+
+            li {
+                display: inline-block;
+                float: left;
+                // font-weight: 700;
+                font-size: 1.5em;
+                color: $yellow;
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+                max-width: 2em;
+            }
+
+            li.spaced {
+                padding-left: 0.5em;
+            }
+        }
+
+        .text.hidden {
+
+            li.spaced {
+                padding-left: 0;
+            }
+
+            li.ghost {
+                opacity: 0;
+                max-width: 0;
+            }
+
+        }
+    }
 
     .menu_container {
         display: inline-block;
@@ -24,7 +85,7 @@ header {
     .bar3 {
         width: 28px;
         height: 2.5px;
-        background-color: black;
+        background-color: $yellow;
         margin: 7px 0;
         transition: 0.4s;
     }
@@ -32,21 +93,25 @@ header {
     .change .bar1 {
         -webkit-transform: rotate(-45deg) translate(-7px, 5px);
         transform: rotate(-45deg) translate(-7px, 5px);
+        background-color: $yellow;
     }
 
     .change .bar2 {
+        background-color: $yellow;
         opacity: 0;
     }
 
     .change .bar3 {
         -webkit-transform: rotate(45deg) translate(-8px, -7px);
         transform: rotate(45deg) translate(-8px, -7px);
+        background-color: $yellow;
     }
 
     #menu_text {
         margin-top: 10px;
-        color: black;
+        color: $yellow;
         cursor: pointer;
+        letter-spacing: 3px;
     }
 }
 
@@ -65,44 +130,52 @@ header {
     transition: 0.5s;
     padding-top: 90px;
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 17px;
     text-transform: uppercase;
+    letter-spacing: 3px;
 
-    .cross-link a, span {
+    .cross-link a,
+    span {
         text-decoration: none;
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    .cross-link a > span {
-        display:inline-block;
-        position:relative;
+    .cross-link a>span {
+        display: inline-block;
+        position: relative;
         white-space: nowrap;
         color: white;
     }
 
-    .cross-link a > span:after {
+    .cross-link a>span:after {
         content: '';
         height: 1px;
         width: 0%;
         position: absolute;
         top: 50%;
         left: 110%;
-        background-color: white;
+        background-color: $yellow;
         -webkit-transition: width 500ms, left 500ms;
         -moz-transition: width 500ms, left 500ms;
         -o-transition: width 500ms, left 500ms;
         transition: width 500ms, left 500ms;
     }
 
-    .cross-link a:hover > span:after {
-        width:120%;
-        left:-10%;
+    .cross-link .active a>span:after {
+        width: 120%;
+        left: -10%;
+        color: $yellow;
+    }
+
+    .cross-link a:hover>span:after {
+        width: 120%;
+        left: -10%;
         -webkit-transition: width 500ms;
         -moz-transition: width 500ms;
         -o-transition: width 500ms;
         transition: width 500ms;
-        color: white;
+        color: $yellow;
     }
 }
 
@@ -123,4 +196,63 @@ header {
 .overlay.active {
     visibility: visible;
     opacity: 1;
+}
+
+@media only screen and (max-width: 520px) {
+
+    header {
+        .navbar {
+            margin: 0;
+            padding: 0;
+
+            .text {
+                font-size: 0.8em;
+
+                li.spaced {
+                    padding-left: 0.3em;
+                }
+            }
+
+            .container-fluid {
+                padding: 0;
+            }
+
+            #menu-bar {
+                margin-right: 5px;
+
+                .col {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+
+                .bar1,
+                .bar2,
+                .bar3 {
+                    width: 24px;
+                    height: 1.4px;
+                }
+
+                .change .bar1 {
+                    -webkit-transform: rotate(-45deg) translate(-6px, 7px);
+                    transform: rotate(-45deg) translate(-6px, 7px);
+                }
+
+                .change .bar3 {
+                    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+
+
+                #menu_text {
+                    margin-top: 10px;
+                    letter-spacing: 1px;
+                    padding-left: 5px;
+                    padding-right: 6px;
+                }
+
+            }
+
+        }
+    }
+
 }

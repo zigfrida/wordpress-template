@@ -12,6 +12,7 @@ firstSlideIn(0);
 function startLoad() {
     let cat_container = document.getElementsByClassName("cat-info");
     let categories = document.getElementsByClassName("cat-nav-link");
+        
     categories[0].className += " active";
     for (let i = 0; i < cat_container.length; i++) {
         const div = cat_container[i];

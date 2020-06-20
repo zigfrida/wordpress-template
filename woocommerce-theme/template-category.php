@@ -16,7 +16,7 @@
         <div id="category-info" class="d-flex flex-column">
             <h1 class="p-2 text-center" id="category-name"></h1>
             <h4 class="p-2 text-center" id="category-desc"></h4>
-            <a id="category-link" class="p-2 text-center"></a>
+            <a id="category-link" class="text-center"><b>View More</b></a>
         </div>
     </div>
 
@@ -54,10 +54,16 @@
                     $cat_link = esc_url(get_category_link($cat->term_id));
 
                     $cat_id = $i + 1;
+                    if ($cat_id < 10) {
+                        $cat_id = "0" + $cat_id;
+                    }
 
                     echo "<div class='cat-nav-link'>";
+                    echo "<svg xmlns='http://www.w3.org/2000/svg'>";
+                    echo "<rect class='shape'/>";
                     echo "<span class='cat-id'>$cat_id</span>";
                     echo "<span class='cat-name'>$cat->name</span>";
+                    echo "</svg>";
                     echo "</div>";
 
                     echo "<div id='$cat->term_id' class='cat-info'>";

@@ -1,14 +1,39 @@
 <?php get_header(); ?>
 
-<div class="content">
+<!-- <div id="cat_products_content">
 
-    <div class="container">
+    <div class="container"> -->
 
-        <h1>This is woocommerce_content</h1>
+
         <?php woocommerce_content();?>
 
-    </div>
+        <?php 
+            // $category = get_queried_object();
+            // echo $category->name;
 
-</div>
+            // $args = array(
+            //         'post_type' => 'product',
+            //         'product_cat' => $category->name,
+            //     );
+
+            // $loop = new WP_Query( $args );
+
+            // if ( $loop->have_posts() ) {
+            //     while ( $loop->have_posts() ) : $loop->the_post();
+            //         the_title();
+            //         the_content();
+            //         //wc_get_template_part( 'content', 'product' );
+            //     endwhile;
+            // } else {
+            //     echo __( 'No products found' );
+            // }
+
+            // wp_reset_postdata();
+        
+        ?>
+
+    <!-- </div>
+
+</div> -->
 
 <?php get_footer(); ?>

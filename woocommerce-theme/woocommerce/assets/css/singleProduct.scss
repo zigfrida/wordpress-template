@@ -1,0 +1,201 @@
+.product {
+    padding-top: 60px;
+    overflow-wrap: anywhere;
+    background-color: rgba(99, 99, 99, 0.8);
+
+    .woocommerce-product-gallery {
+
+        img {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        figure {
+            margin: 0;
+        }
+    }
+
+
+    #container-product-info {
+        .summary {
+            font-family: "Montserrat", sans-serif;
+            color: white;
+
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(7px);
+            box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+
+            .product_title {
+                text-transform: uppercase;
+                font-family: "Pathway Gothic One", sans-serif;
+                color: #ffcc00;
+                letter-spacing: 1.2vw;
+                text-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
+                margin-top: -65px;
+            }
+        }
+
+        #container-related-products {
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(7px);
+            box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+
+
+
+
+            .related>h2 {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                font-family: "Pathway Gothic One", sans-serif;
+                color: #ffcc00;
+                letter-spacing: 1.2vw;
+                text-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
+                margin-top: -65px;
+            }
+
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width: 520px) {
+    .product {
+        padding-top: 20px;
+
+        .woocommerce-product-gallery {
+            padding-right: 5px;
+            padding-left: 5px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #container-product-info {
+            margin: 30px;
+
+            >div {
+                margin-bottom: 60px;
+            }
+
+            .summary {
+                padding: 20px;
+                padding-top: 40px;
+
+                .product_title {
+                    font-size: 2rem;
+                    margin-top: -60px;
+                }
+            }
+
+            #container-related-products {
+                padding: 20px;
+
+                .related>h2 {
+                    font-size: 2rem;
+                    margin-top: -40px;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media only screen and (min-width: 521px) and (max-width: 850px) {
+    .product {
+
+        .woocommerce-product-gallery {
+            padding-right: 20px;
+            padding-left: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+        #container-product-info {
+            margin-left: 10%;
+            margin-right: 10%;
+
+            >div {
+                margin-bottom: 80px;
+            }
+
+            .summary {
+                padding: 40px;
+                margin-top: -40px;
+
+
+                .product_title {}
+            }
+
+            #container-related-products {
+                padding: 40px;
+                margin-top: -40px;
+
+                h2 {}
+            }
+        }
+
+    }
+
+}
+
+
+//CSS FOR RELATED PRODUCTS (SIMILAR)
+
+.product {
+
+    #container-product-info {
+
+        #container-related-products {
+
+            .related {
+
+                ul {
+
+                    li {
+
+                        >a {}
+
+                        .button {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// @media only screen and (min-width: 521px) and (max-width: 850px) {
+
+// }
+
+// @media only screen and (min-width: 851px) and (max-width: 1200px) {
+
+// }
+
+// @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+
+// }
+
+// @media only screen and (min-width: 1601px) {
+
+// }

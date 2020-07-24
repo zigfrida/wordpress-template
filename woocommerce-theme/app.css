@@ -11133,7 +11133,7 @@ header #menu_text {
   }
 
   header .navbar #menu-bar {
-    margin-right: 5px;
+    margin-right: 15px;
   }
 
   header .navbar #menu-bar .col {
@@ -11159,8 +11159,8 @@ header #menu_text {
   header .navbar #menu-bar #menu_text {
     margin-top: 10px;
     letter-spacing: 1px;
-    padding-left: 5px;
-    padding-right: 6px;
+    padding-left: 0px;
+    padding-right: 15px;
   }
 }
 
@@ -11611,11 +11611,6 @@ html {
   #scroll-container li {
     margin-bottom: 0;
   }
-}
-
-.woocommerce .woocommerce-input-wrapper {
-  width: 100%;
-  display: block;
 }
 
 body {

@@ -1,2 +1,8 @@
 node_modules/
 images/
+
+# Sass
+.sass-cache/
+
+# Compiled CSS
+woocommerce/assets/css/*.css

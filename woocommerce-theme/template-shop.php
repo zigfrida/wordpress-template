@@ -8,6 +8,8 @@ Template Name: Shop Page
 
     <div class="container">
 
+    <h1>This is the template shop PHP</h1>
+
         <img src="<?php the_post_thumbnail_url( 'post_image' )?>">
 
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>

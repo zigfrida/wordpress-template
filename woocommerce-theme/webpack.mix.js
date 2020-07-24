@@ -12,5 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.disableSuccessNotifications()
-    .js('src/app.js', './')
-    .sass('src/app.scss', './');
+    .js('src/js/app.js', './')
+    .js('woocommerce/assets/js/woocommerce.js','./woocommerce/')
+    .sass('src/css/app.scss', './')
+    .sass('woocommerce/assets/css/woocommerce.scss','./woocommerce/');

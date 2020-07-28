@@ -1,7 +1,5 @@
 <?php
 
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
-
 function load_stylesheets(){
 
     wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', '', 1, 'all');
@@ -15,18 +13,6 @@ function load_stylesheets(){
 }
 
 add_action('wp_enqueue_scripts', 'load_stylesheets');
-
-// function load_woocommerce_stylesheets(){
-
-//     wp_register_style( 'woocommerce-stylesheet', get_template_directory_uri() . '/woocommerce/assets/css/woocommerce-style.scss', '', 1, 'all' );
-//     wp_enqueue_style( 'woocommerce-stylesheet' );
-    
-//     // if ( class_exists( 'woocommerce' ) ) {
-// 	// 	wp_enqueue_style( 'woocommerce-stylesheet' );
-// 	// }
-// }
-
-// add_action( 'admin_enqueue_scripts', 'load_woocommerce_stylesheets' );
 
 function load_javascript(){
     wp_register_script('custom', get_template_directory_uri() . '/app.js', 'jquery', 1, true);
@@ -89,11 +75,21 @@ register_sidebar(
     )
 );
 
+
+/**
+ * WooCommerce Configuration
+ * 
+ */
+
+ //Declaring WooCommerce Support
 function mytheme_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+// Theme no longer use the WooCommerce stylesheet, giving a blank canvas.
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
@@ -103,3 +99,13 @@ function woo_remove_product_tabs( $tabs ) {
     unset( $tabs['additional_information'] );   // Remove the additional information tab
     return $tabs;
 }
+
+//Removing product quantity selection
+function custom_remove_all_quantity_fields( $return, $product ) {
+    return true;
+}
+add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
+
+
+add_filter('genesis_post_meta', 'crunchify_post_meta');
+ 

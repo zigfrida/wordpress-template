@@ -11490,7 +11490,8 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(99, 99, 99, 0.8);
+  background: #1d212c;
+  background: linear-gradient(120deg, #1d212c 0%, #3f4e7d 100%);
   content: "";
 }
 
@@ -11522,7 +11523,6 @@ html {
   width: 100%;
   padding: 0;
   height: 750px;
-  background-color: transparent;
 }
 
 #about-content #scnd-left {

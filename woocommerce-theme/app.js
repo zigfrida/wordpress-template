@@ -18101,9 +18101,9 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\amand\Programs\xampp\htdocs\Elaine\wordpress-5.3.2\wordpress\wp-content\themes\woocommerce-theme\src\js\app.js */"./src/js/app.js");
-__webpack_require__(/*! C:\Users\amand\Programs\xampp\htdocs\Elaine\wordpress-5.3.2\wordpress\wp-content\themes\woocommerce-theme\src\css\app.scss */"./src/css/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\amand\Programs\xampp\htdocs\Elaine\wordpress-5.3.2\wordpress\wp-content\themes\woocommerce-theme\woocommerce\assets\css\woocommerce.scss */"./woocommerce/assets/css/woocommerce.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Elaine\wordpress\wp-content\themes\woocommerce-theme\src\js\app.js */"./src/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\Elaine\wordpress\wp-content\themes\woocommerce-theme\src\css\app.scss */"./src/css/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Elaine\wordpress\wp-content\themes\woocommerce-theme\woocommerce\assets\css\woocommerce.scss */"./woocommerce/assets/css/woocommerce.scss");
 
 
 /***/ })

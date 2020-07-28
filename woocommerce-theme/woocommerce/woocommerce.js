@@ -141,7 +141,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\amand\Programs\xampp\htdocs\Elaine\wordpress-5.3.2\wordpress\wp-content\themes\woocommerce-theme\woocommerce\assets\js\woocommerce.js */"./woocommerce/assets/js/woocommerce.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Elaine\wordpress\wp-content\themes\woocommerce-theme\woocommerce\assets\js\woocommerce.js */"./woocommerce/assets/js/woocommerce.js");
 
 
 /***/ })

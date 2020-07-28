@@ -1,7 +1,20 @@
+body , html{
+    height: initial;
+}
+
+.single-product {
+    // background: rgb(29,33,44);
+    // background: linear-gradient(120deg, rgba(29,33,44,1) 0%, rgba(63,78,125,1) 100%);
+    background: rgb(29,33,44);
+    background: linear-gradient(140deg, rgba(29,33,44,1) 10%, rgba(79,101,175,1) 100%);
+    // background-color: #537895;
+    // background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
 .product {
     padding-top: 60px;
     overflow-wrap: anywhere;
-    background-color: rgba(99, 99, 99, 0.8);
+    //background-color: rgba(99, 99, 99, 0.8);
 
     .woocommerce-product-gallery {
 
@@ -11,6 +24,12 @@
 
         figure {
             margin: 0;
+        }
+
+        .woocommerce-product-gallery__image:nth-child(n+2) {
+            width: 20%;
+            display: inline-block;
+            margin: 20px;
         }
     }
 
@@ -23,6 +42,7 @@
             background-color: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(7px);
             box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
 
             .product_title {
                 text-transform: uppercase;
@@ -32,15 +52,31 @@
                 text-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
                 margin-top: -65px;
             }
+
+            .price {
+                
+            }
+
+            .product_meta {
+                color: transparent;
+
+                .tagged_as a{
+                    font-size: 12px;
+                    display: inline;
+                    color: #ffcc00;
+                    border: 1px solid #ffcc00;
+                    border-radius: 20px;
+                    padding: 3px 9px 3px 9px;
+                }
+            }
+
         }
 
         #container-related-products {
             background-color: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(7px);
             box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
-
-
-
+            border-radius: 20px;
 
             .related>h2 {
                 font-size: 2.5rem;
@@ -52,11 +88,28 @@
                 margin-top: -65px;
             }
 
+            ul {
+                list-style-type: none;
+                background-color: transparent;
+                padding-left: 0;
+
+                li {
+                    background-color: transparent;
+
+                    img {
+                        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+                    }
+                }
+            }
+
+            ul > li:first-child {
+                padding-top: 25px;
+            }
+
         }
     }
 
 }
-
 
 
 @media only screen and (max-width: 520px) {
@@ -70,6 +123,12 @@
             img {
                 width: 100%;
                 height: auto;
+            }
+
+            .woocommerce-product-gallery__image:nth-child(n+2) {
+                width: 25%;
+                display: inline-block;
+                margin: 10px;
             }
         }
 

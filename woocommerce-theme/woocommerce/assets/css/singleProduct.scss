@@ -3,12 +3,8 @@ body , html{
 }
 
 .single-product {
-    // background: rgb(29,33,44);
-    // background: linear-gradient(120deg, rgba(29,33,44,1) 0%, rgba(63,78,125,1) 100%);
     background: rgb(29,33,44);
     background: linear-gradient(140deg, rgba(29,33,44,1) 10%, rgba(79,101,175,1) 100%);
-    // background-color: #537895;
-    // background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
 }
 
 .product {
@@ -20,6 +16,16 @@ body , html{
 
         img {
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .woocommerce-product-gallery__image:nth-child(1) {
+            position: absolute;
+            
+            img {
+                width: auto;
+                min-height: 550px;
+                max-height: calc(100% - 70px);      //Pixel = heading height
+            }
         }
 
         figure {
@@ -35,6 +41,19 @@ body , html{
 
 
     #container-product-info {
+
+        // width: 40%;
+        // z-index: 2;
+        // color: white;
+        // position: fixed;
+        // right: 0;
+        // margin-right: 6%;
+        // padding: 40px;
+        // background-color: rgba(0, 0, 0, 0.2);
+        // backdrop-filter: blur(7px);
+        // margin-top: calc(10% + 140px);
+        // box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+
         .summary {
             font-family: "Montserrat", sans-serif;
             color: white;
@@ -97,6 +116,10 @@ body , html{
                 letter-spacing: 1.2vw;
                 text-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
                 margin-top: -65px;
+            }
+
+            .button {
+                display: none;
             }
 
             ul {
@@ -247,41 +270,6 @@ body , html{
     }
 
 }
-
-
-//CSS FOR RELATED PRODUCTS (SIMILAR)
-
-.product {
-
-    #container-product-info {
-
-        #container-related-products {
-
-            .related {
-
-                ul {
-
-                    li {
-
-                        >a {}
-
-                        .button {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
 
 
 

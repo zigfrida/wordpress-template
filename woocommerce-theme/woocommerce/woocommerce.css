@@ -17,6 +17,16 @@ html {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 }
 
+.product .woocommerce-product-gallery .woocommerce-product-gallery__image:nth-child(1) {
+  position: absolute;
+}
+
+.product .woocommerce-product-gallery .woocommerce-product-gallery__image:nth-child(1) img {
+  width: auto;
+  min-height: 550px;
+  max-height: calc(100% - 70px);
+}
+
 .product .woocommerce-product-gallery figure {
   margin: 0;
 }
@@ -90,6 +100,10 @@ html {
   letter-spacing: 1.2vw;
   text-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
   margin-top: -65px;
+}
+
+.product #container-product-info #container-related-products .button {
+  display: none;
 }
 
 .product #container-product-info #container-related-products ul {
@@ -219,9 +233,5 @@ html {
     padding: 40px;
     margin-top: -40px;
   }
-}
-
-.product #container-product-info #container-related-products .related ul li .button {
-  display: none;
 }
 

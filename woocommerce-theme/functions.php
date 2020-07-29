@@ -106,6 +106,15 @@ function custom_remove_all_quantity_fields( $return, $product ) {
 }
 add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
 
-
 add_filter('genesis_post_meta', 'crunchify_post_meta');
- 
+
+// To change add to cart text on product archives(Collection) page
+function woocommerce_custom_product_add_to_cart_text() {
+    return __( 'Download', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+
+/**
+ * Trim zeros in price decimals
+ **/
+add_filter( 'woocommerce_price_trim_zeros', '__return_true' );

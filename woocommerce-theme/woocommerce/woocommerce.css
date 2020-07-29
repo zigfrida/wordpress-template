@@ -46,6 +46,21 @@ html {
   margin-top: -65px;
 }
 
+.product #container-product-info .summary .price > span {
+  position: absolute;
+  right: 25px;
+}
+
+.product #container-product-info .summary .woocommerce-product-details__short-description {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 20px;
+}
+
+.product #container-product-info .summary .out-of-stock {
+  color: #ffcc00;
+  text-align: center;
+}
+
 .product #container-product-info .summary .product_meta {
   color: transparent;
 }
@@ -88,11 +103,42 @@ html {
 }
 
 .product #container-product-info #container-related-products ul li img {
+  width: 250px;
+  height: 250px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.product #container-product-info #container-related-products ul li h2 {
+  width: 100%;
+  position: absolute;
+  margin-left: 235px;
+  font-family: "Pathway Gothic One", sans-serif;
+  color: #ffcc00;
+  text-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
+  letter-spacing: 1.2vw;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
 }
 
 .product #container-product-info #container-related-products ul > li:first-child {
   padding-top: 25px;
+}
+
+.product #container-product-info #container-related-products .price {
+  display: none;
+}
+
+.product button {
+  display: block;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  border-radius: 50px;
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffcc00 80%);
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 520px) {

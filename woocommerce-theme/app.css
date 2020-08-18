@@ -11206,14 +11206,13 @@ header #menu_text {
   }
 }
 
-body,
-html {
+.home {
   height: 100%;
 }
 
 #top-content {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 0;
   background-repeat: no-repeat;
   background-size: cover;

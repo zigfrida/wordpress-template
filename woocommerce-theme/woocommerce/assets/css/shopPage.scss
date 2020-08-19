@@ -1,0 +1,91 @@
+.page-id-57 {
+    background: linear-gradient(120deg, #1d212c 0%, #3f4e7d 100%);
+}
+
+#explore {
+    width: 100%;
+    height: 100%;
+    .page-title {
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 15px;
+        color: $yellow;
+        text-transform: uppercase;
+        font-family: "Pathway Gothic One", sans-serif;
+        letter-spacing: 1.2vw;
+        text-shadow: -6px 0 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .products {
+        line-height: 0;
+        margin-right: 10px;
+        margin-left: 10px;
+        -webkit-column-count: 4;
+        -webkit-column-gap:   0px;
+        -moz-column-count:    4;
+        -moz-column-gap:      0px;
+        column-count:         4;
+        column-gap:           10px;
+
+        .product-category {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            img {
+                width: 100% !important;
+                height: auto !important;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .woocommerce-loop-category__title {
+                margin: -35px 0 20px 0;
+                color: white;
+                font-size: 20px;
+                line-height: 1.2;
+                padding: 0 10px;
+                box-sizing: border-box;
+                font-family: "Raleway", sans-serif;
+                text-shadow: -6px 0 18px rgba(0, 0, 0, 0.35);
+
+                .count {
+                    display: none;
+                }
+            }
+        }
+
+        :hover {
+            text-decoration: none;
+            text-emphasis: none;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .page-title {
+            padding-top: 25px;
+        }
+
+        .products {
+            -moz-column-count:    3;
+            -webkit-column-count: 3;
+            column-count:         3;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .products {
+            -moz-column-count:    2;
+            -webkit-column-count: 2;
+            column-count:         2;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .products {
+            -moz-column-count:    1;
+            -webkit-column-count: 1;
+            column-count:         1;
+        }
+    }
+
+}

@@ -69,3 +69,5 @@
 </div>
 
 <div id="overlay" class="overlay" onclick="menu_animation()"></div>
+
+<div id="<?php  global $post; $post_slug=$post->post_name; echo $post_slug; ?>" class="main-container">

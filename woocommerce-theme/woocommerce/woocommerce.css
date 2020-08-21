@@ -73,8 +73,55 @@
   text-align: center;
 }
 
-.single-product .product #container-product-info .summary .product_meta {
-  color: transparent;
+.single-product .product #container-product-info .summary .product_meta .posted_in {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.single-product .product #container-product-info .summary .product_meta .posted_in a {
+  color: #ffcc00;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.1vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  margin: auto;
+  margin-right: 25px;
+  position: relative;
+  text-decoration: none;
+}
+
+.single-product .product #container-product-info .summary .product_meta .posted_in a:after {
+  content: "";
+  height: 0.4px;
+  width: 0%;
+  position: absolute;
+  top: 55%;
+  left: 110%;
+  background-color: white;
+  transition: width 500ms, left 500ms;
+}
+
+.single-product .product #container-product-info .summary .product_meta .posted_in a:hover:after {
+  width: 120%;
+  left: -10%;
+  transition: width 500ms;
+  color: white;
+}
+
+.single-product .product #container-product-info .summary .product_meta .tagged_as {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  display: block;
 }
 
 .single-product .product #container-product-info .summary .product_meta .tagged_as a {
@@ -129,7 +176,12 @@
 }
 
 .single-product .product #container-product-info #container-related-products ul li h2 {
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 250px;
+  max-height: 30px;
+  overflow: hidden;
   position: absolute;
   margin-left: 235px;
   font-family: "Pathway Gothic One", sans-serif;
@@ -138,6 +190,7 @@
   letter-spacing: 0.5vw;
   transform-origin: 0 0;
   transform: rotate(270deg);
+  font-size: 1.5em;
 }
 
 .single-product .product #container-product-info #container-related-products ul > li:first-child {
@@ -159,6 +212,68 @@
   background-color: #fbb034;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffcc00 80%);
   font-size: 14px;
+}
+
+.single-product .woocommerce-notices-wrapper {
+  width: 100%;
+  position: absolute;
+  margin-top: 45vh;
+  z-index: 1;
+  font-size: 25px;
+}
+
+.single-product .woocommerce-notices-wrapper .woocommerce-message {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+}
+
+.single-product .woocommerce-notices-wrapper .woocommerce-error {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+}
+
+.single-product .woocommerce-notices-wrapper a {
+  display: block;
+  color: #ffcc00;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.single-product .woocommerce-notices-wrapper a:after {
+  content: "";
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  top: 55%;
+  left: 110%;
+  background-color: white;
+  transition: width 500ms, left 500ms;
+}
+
+.single-product .woocommerce-notices-wrapper a:hover:after {
+  width: 120%;
+  left: -10%;
+  transition: width 500ms;
+  color: white;
 }
 
 @media only screen and (max-width: 520px) {
@@ -313,6 +428,25 @@
   }
 }
 
+@media only screen and (min-width: 950px) and (max-width: 1200px) {
+  .single-product #container-product-info #container-related-products {
+    padding-right: 0 !important;
+  }
+
+  .single-product #container-product-info #container-related-products .products li {
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    padding-right: 20px;
+  }
+
+  .single-product #container-product-info #container-related-products ul > li:last-child {
+    padding-right: 0;
+  }
+}
+
 @media only screen and (min-width: 1400px) {
   .single-product > .main-container > .product .woocommerce-product-gallery {
     padding-right: 400px;
@@ -342,7 +476,8 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  margin-bottom: 25px;
   color: #ffcc00;
   text-transform: uppercase;
   font-family: "Pathway Gothic One", sans-serif;
@@ -354,11 +489,11 @@
   line-height: 0;
   margin-right: 10px;
   margin-left: 10px;
-  -webkit-column-count: 4;
+  -webkit-column-count: 3;
   -webkit-column-gap: 0px;
-  -moz-column-count: 4;
+  -moz-column-count: 3;
   -moz-column-gap: 0px;
-  column-count: 4;
+  column-count: 3;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
@@ -368,6 +503,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 10px;
 }
 
 #explore .products .product-category img {
@@ -397,18 +533,11 @@
           text-emphasis: none;
 }
 
-@media (max-width: 1000px) {
-  #explore .page-title {
-    padding-top: 25px;
-  }
-
-  #explore .products {
-    -moz-column-count: 3;
-    column-count: 3;
-  }
-}
-
 @media (max-width: 800px) {
+  #explore .page-title {
+    margin-top: 30px;
+  }
+
   #explore .products {
     -moz-column-count: 2;
     column-count: 2;
@@ -416,10 +545,132 @@
 }
 
 @media (max-width: 500px) {
+  #explore .page-title {
+    margin-top: 20px;
+  }
+
   #explore .products {
     -moz-column-count: 1;
     column-count: 1;
   }
+}
+
+.archive {
+  background: linear-gradient(120deg, #1d212c 0%, #3f4e7d 100%);
+}
+
+.archive .main-container {
+  width: 100%;
+  height: 100%;
+}
+
+.archive .main-container .page-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-transform: uppercase;
+  font-family: "Pathway Gothic One", sans-serif;
+  letter-spacing: 1.2vw;
+  text-shadow: -6px 0 18px rgba(0, 0, 0, 0.35);
+}
+
+.archive .main-container .term-description {
+  display: none;
+}
+
+.archive .main-container .products {
+  line-height: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 3;
+  -moz-column-gap: 0px;
+  column-count: 3;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.archive .main-container .products .product {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.archive .main-container .products .product img {
+  width: 100% !important;
+  height: auto !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.archive .main-container .products .product .woocommerce-loop-product__title {
+  margin: -35px 0 20px 0;
+  color: white;
+  font-size: 20px;
+  line-height: 0.8;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-shadow: -6px 0 18px rgba(0, 0, 0, 0.35);
+}
+
+.archive .main-container .products .product .price {
+  display: none;
+}
+
+.archive .main-container .products .product .button {
+  display: none;
+}
+
+.archive .main-container .products .product .add_to_cart_button {
+  display: none;
+}
+
+.archive .main-container .products :hover {
+  text-decoration: none;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+}
+
+@media (max-width: 800px) {
+  .archive .main-container .page-title {
+    margin-top: 30px;
+  }
+
+  .archive .main-container .products {
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .archive .main-container .page-title {
+    margin-top: 20px;
+  }
+
+  .archive .main-container .products {
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+.archive .main-container .woocommerce-result-count {
+  display: none;
+}
+
+.archive .main-container .orderby {
+  width: 135px;
+  background-color: transparent;
+  color: #ffcc00;
+  border: none;
+  margin-left: calc(100% - 176px);
+  margin-bottom: 20px;
 }
 
 body,

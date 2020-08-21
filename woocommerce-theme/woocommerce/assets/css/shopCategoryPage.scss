@@ -8,7 +8,8 @@
     .page-title {
         width: fit-content;
         margin: auto;
-        margin-bottom: 15px;
+        margin-top: 40px;
+        margin-bottom: 25px;
         color: $yellow;
         text-transform: uppercase;
         font-family: "Pathway Gothic One", sans-serif;
@@ -20,17 +21,18 @@
         line-height: 0;
         margin-right: 10px;
         margin-left: 10px;
-        -webkit-column-count: 4;
+        -webkit-column-count: 3;
         -webkit-column-gap:   0px;
-        -moz-column-count:    4;
+        -moz-column-count:    3;
         -moz-column-gap:      0px;
-        column-count:         4;
+        column-count:         3;
         column-gap:           10px;
 
         .product-category {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            margin-bottom: 10px;
 
             img {
                 width: 100% !important;
@@ -60,19 +62,23 @@
         }
     }
 
-    @media (max-width: 1000px) {
-        .page-title {
-            padding-top: 25px;
-        }
+    // @media (max-width: 1000px) {
+    //     .page-title {
+    //         padding-top: 25px;
+    //     }
 
-        .products {
-            -moz-column-count:    3;
-            -webkit-column-count: 3;
-            column-count:         3;
-        }
-    }
+    //     .products {
+    //         -moz-column-count:    3;
+    //         -webkit-column-count: 3;
+    //         column-count:         3;
+    //     }
+    // }
 
     @media (max-width: 800px) {
+        .page-title {
+            margin-top: 30px;
+        }
+
         .products {
             -moz-column-count:    2;
             -webkit-column-count: 2;
@@ -81,11 +87,14 @@
     }
 
     @media (max-width: 500px) {
+        .page-title {
+            margin-top: 20px;
+        }
+
         .products {
             -moz-column-count:    1;
             -webkit-column-count: 1;
             column-count:         1;
         }
     }
-
 }

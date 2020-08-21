@@ -77,15 +77,64 @@
                 }
 
                 .product_meta {
-                    color: transparent;
 
-                    .tagged_as a{
-                        font-size: 12px;
-                        display: inline;
-                        color: $yellow;
-                        border: 1px solid $yellow;
-                        border-radius: 20px;
-                        padding: 3px 9px 3px 9px;
+                    .posted_in {
+                        width: fit-content;
+                        margin: auto;
+                        display: block;
+                        margin-bottom: 10px;
+                        text-align: center;
+
+                        a {
+                            color: $yellow;
+                            font-family: "Pathway Gothic One", sans-serif;
+                            font-size: 17px;
+                            letter-spacing: 0.1vw;
+                            width: fit-content;
+                            display: inline-block;
+                            margin: auto;
+                            margin-right: 25px;
+                            position: relative;
+                            text-decoration: none;
+                        }
+
+                        a:after {
+                            content: "";
+                            height: 0.4px;
+                            width: 0%;
+                            position: absolute;
+                            top: 55%;
+                            left: 110%;
+                            background-color: white;
+                            transition: width 500ms, left 500ms;
+                        }
+
+                        a:hover:after {
+                            width: 120%;
+                            left: -10%;
+                            -webkit-transition: width 500ms;
+                            -moz-transition: width 500ms;
+                            -o-transition: width 500ms;
+                            transition: width 500ms;
+                            color: white;
+                            
+                        }
+
+                    }
+
+                    .tagged_as {
+                        width: fit-content;
+                        margin: auto;
+                        display: block;
+
+                        a{
+                            font-size: 12px;
+                            display: inline;
+                            color: $yellow;
+                            border: 1px solid $yellow;
+                            border-radius: 20px;
+                            padding: 3px 9px 3px 9px;
+                        }
                     }
                 }
 
@@ -127,7 +176,10 @@
                         }
 
                         h2 {
-                            width: 100%;
+                            width: fit-content;
+                            max-width: 250px;
+                            max-height: 30px;
+                            overflow: hidden;
                             position: absolute;
                             margin-left: 235px;
                             font-family: "Pathway Gothic One", sans-serif;
@@ -136,6 +188,7 @@
                             letter-spacing: 0.5vw;
                             transform-origin: 0 0;
                             transform: rotate(270deg);
+                            font-size: 1.5em;
                         }
                     }
                 }
@@ -164,6 +217,68 @@
             font-size: 14px;
         }
 
+    }
+
+    .woocommerce-notices-wrapper {
+        width: 100%;
+        position: absolute;
+        margin-top: 45vh;
+        z-index: 1;
+        font-size: 25px;
+
+        .woocommerce-message {
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+        }
+
+        .woocommerce-error {
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 11px rgba(0, 0, 0, 0.4);
+        }
+
+        a {
+            display: block;
+            color: $yellow;
+            text-decoration: none;
+            position: relative;
+            white-space: nowrap;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+
+        a:after {
+            content: "";
+            height: 1px;
+            width: 0%;
+            position: absolute;
+            top: 55%;
+            left: 110%;
+            background-color: white;
+            transition: width 500ms, left 500ms;
+        }
+
+        a:hover:after {
+            width: 120%;
+            left: -10%;
+            -webkit-transition: width 500ms;
+            -moz-transition: width 500ms;
+            -o-transition: width 500ms;
+            transition: width 500ms;
+            color: white;
+            
+        }
     }
 }
 
@@ -360,6 +475,28 @@
             right: 0;
             margin-right: 1%;
             margin-top: 10%;
+        }
+    }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1200px) {
+    .single-product {
+        #container-product-info {
+            #container-related-products {
+                padding-right: 0 !important;
+
+                .products {
+                    li {
+                        display: inline-block;
+                        width: fit-content;
+                        margin: auto;
+                        padding-right: 20px;
+                    }
+                }
+                ul > li:last-child {
+                    padding-right: 0;
+                }
+            }
         }
     }
 }

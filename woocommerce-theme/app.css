@@ -10961,11 +10961,13 @@ header .navbar .navbar-header a {
 header .navbar .navbar-header ul {
   height: 100%;
   padding-left: 20px;
-  padding-top: 5px;
 }
 
 header .navbar .text {
   text-transform: none;
+  font-family: "Pathway Gothic One", sans-serif;
+  letter-spacing: 3px;
+  font-size: 23px;
   list-style-type: none;
   border-bottom: 0;
   text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
@@ -11078,7 +11080,7 @@ header #menu_text {
   transition: width 500ms, left 500ms;
 }
 
-#sidenav .cross-link .active a > span:after {
+#sidenav .cross-link .current-menu-item a > span:after {
   width: 120%;
   left: -10%;
   color: #ffcc00;
@@ -11118,6 +11120,8 @@ header #menu_text {
 
   header .navbar .text {
     font-size: 0.8em;
+    padding-top: 6px;
+    letter-spacing: 2px;
   }
 
   header .navbar .text li.spaced {
@@ -11320,7 +11324,7 @@ header #menu_text {
   height: 40px;
   margin-bottom: 1em;
   border-radius: 100%;
-  box-shadow: 0 1px 0 0 rgba(64, 90, 77, 0.25), 0 -1px 0 0 rgba(192, 166, 26, 0.25), 1px 0 0 0 rgba(64, 90, 77, 0.25), -1px 0 0 0 rgba(192, 166, 26, 0.25), 1px -1px 0 0 rgba(128, 128, 51, 0.5), -1px 1px 0 0 rgba(128, 128, 51, 0.5), 1px 1px 0 0 rgba(0, 51, 102, 0.75), -1px -1px 0 0 rgba(255, 204, 0, 0.75);
+  box-shadow: 0 1px 0 0 rgba(255, 204, 0, 0.25), 0 -1px 0 0 rgba(255, 204, 0, 0.25), 1px 0 0 0 rgba(255, 204, 0, 0.25), -1px 0 0 0 rgba(255, 204, 0, 0.25), 1px -1px 0 0 rgba(255, 204, 0, 0.5), -1px 1px 0 0 rgba(255, 204, 0, 0.5), 1px 1px 0 0 rgba(255, 204, 0, 0.75), -1px -1px 0 0 rgba(255, 204, 0, 0.75);
 }
 
 .social-icons i {
@@ -11489,8 +11493,7 @@ header #menu_text {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #1d212c;
-  background: linear-gradient(120deg, #1d212c 0%, #3f4e7d 100%);
+  background-color: #1d212c;
   content: "";
 }
 
@@ -11522,6 +11525,7 @@ header #menu_text {
   width: 100%;
   padding: 0;
   height: 750px;
+  background-color: #1d212c;
 }
 
 #about-content #scnd-left {

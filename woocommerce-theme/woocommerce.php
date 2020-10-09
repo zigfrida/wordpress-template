@@ -4,7 +4,7 @@
 
     <div class="container"> -->
 
-        <h1>This is woocommerce content</h1>
+        <!-- <h1>This is woocommerce content</h1> -->
 
         <?php woocommerce_content();?>
 

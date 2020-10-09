@@ -462,16 +462,12 @@
   }
 }
 
-.page-id-57 {
-  background: linear-gradient(120deg, #1d212c 0%, #3f4e7d 100%);
-}
-
-#explore {
+#page-id-57 {
   width: 100%;
   height: 100%;
 }
 
-#explore .page-title {
+#page-id-57 .page-title {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -485,7 +481,7 @@
   text-shadow: -6px 0 18px rgba(0, 0, 0, 0.35);
 }
 
-#explore .products {
+#page-id-57 .products {
   line-height: 0;
   margin-right: 10px;
   margin-left: 10px;
@@ -498,7 +494,7 @@
        column-gap: 10px;
 }
 
-#explore .products .product-category {
+#page-id-57 .products .product-category {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -506,13 +502,13 @@
   margin-bottom: 10px;
 }
 
-#explore .products .product-category img {
+#page-id-57 .products .product-category img {
   width: 100% !important;
   height: auto !important;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-#explore .products .product-category .woocommerce-loop-category__title {
+#page-id-57 .products .product-category .woocommerce-loop-category__title {
   margin: -35px 0 20px 0;
   color: white;
   font-size: 20px;
@@ -523,40 +519,38 @@
   text-shadow: -6px 0 18px rgba(0, 0, 0, 0.35);
 }
 
-#explore .products .product-category .woocommerce-loop-category__title .count {
+#page-id-57 .products .product-category .woocommerce-loop-category__title .count {
   display: none;
 }
 
-#explore .products :hover {
+#page-id-57 .products :hover {
   text-decoration: none;
-  -webkit-text-emphasis: none;
-          text-emphasis: none;
 }
 
 @media (max-width: 800px) {
-  #explore .page-title {
+  #page-id-57 .page-title {
     margin-top: 30px;
   }
 
-  #explore .products {
+  #page-id-57 .products {
     -moz-column-count: 2;
     column-count: 2;
   }
 }
 
 @media (max-width: 500px) {
-  #explore .page-title {
+  #page-id-57 .page-title {
     margin-top: 20px;
   }
 
-  #explore .products {
+  #page-id-57 .products {
     -moz-column-count: 1;
     column-count: 1;
   }
 }
 
 .archive {
-  background: linear-gradient(120deg, #1d212c 0%, #3f4e7d 100%);
+  background-color: #1d212c;
 }
 
 .archive .main-container {

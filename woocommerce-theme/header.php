@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <?php wp_head(); ?>
-    <title>Home Page</title>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
 </head>
 
 <body <?php body_class(); ?> translate="no">
@@ -70,4 +70,4 @@
 
 <div id="overlay" class="overlay" onclick="menu_animation()"></div>
 
-<div id="<?php  global $post; $post_slug=$post->post_name; echo $post_slug; ?>" class="main-container">
+<div id="<?php  echo "page-id-" . $post_id = is_shop() ? wc_get_page_id('shop') : get_the_ID(); ?>" class="main-container">

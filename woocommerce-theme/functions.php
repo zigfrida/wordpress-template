@@ -54,15 +54,6 @@ register_nav_menus(
     )
 );
 
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-
-function special_nav_class ($classes, $item) {
-  if (in_array('current-menu-item', $classes) ){
-    $classes[] = 'active ';
-  }
-  return $classes;
-}
-
 //Add images sizes
 // add_image_size( 'post_image', 1100, 550, false );
 
@@ -143,21 +134,21 @@ function max_related_products_args( $args ) {
 
 
 
-add_filter('wp_handle_upload_prefilter', 'limit_wp_handle_upload_prefilter');
-function yoursite_wp_handle_upload_prefilter($file) {
-  // This bit is for the flash uploader
-  if ($file['type']=='application/octet-stream' && isset($file['tmp_name'])) {
-    $file_size = getimagesize($file['tmp_name']);
-    if (isset($file_size['error']) && $file_size['error']!=0) {
-      $file['error'] = "Unexpected Error: {$file_size['error']}";
-      return $file;
-    } else {
-      $file['type'] = $file_size['mime'];
-    }
-  }
-  if ($post_id = (isset($_REQUEST['post_id']) ? $_REQUEST['post_id'] : false)) {
-    if (count(get_posts("post_type=attachment&post_parent={$post_id}"))>3)
-      $file['error'] = "Sorry, you cannot upload more than four (4) image.";
-  }
-  return $file;
-}
+// add_filter('wp_handle_upload_prefilter', 'limit_wp_handle_upload_prefilter');
+// function yoursite_wp_handle_upload_prefilter($file) {
+//   // This bit is for the flash uploader
+//   if ($file['type']=='application/octet-stream' && isset($file['tmp_name'])) {
+//     $file_size = getimagesize($file['tmp_name']);
+//     if (isset($file_size['error']) && $file_size['error']!=0) {
+//       $file['error'] = "Unexpected Error: {$file_size['error']}";
+//       return $file;
+//     } else {
+//       $file['type'] = $file_size['mime'];
+//     }
+//   }
+//   if ($post_id = (isset($_REQUEST['post_id']) ? $_REQUEST['post_id'] : false)) {
+//     if (count(get_posts("post_type=attachment&post_parent={$post_id}"))>3)
+//       $file['error'] = "Sorry, you cannot upload more than four (4) image.";
+//   }
+//   return $file;
+// }

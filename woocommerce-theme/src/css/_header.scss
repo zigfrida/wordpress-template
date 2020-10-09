@@ -28,7 +28,7 @@ header {
             ul {
                 height: 100%;
                 padding-left: 20px;
-                padding-top: 5px;
+                //padding-top: 5px;
             }
 
         }
@@ -37,6 +37,9 @@ header {
             text-transform: none;
             // font-family: 'Muli',
             //     sans-serif;
+            font-family: "Pathway Gothic One", sans-serif;
+            letter-spacing: 3px;
+            font-size: 23px;
             list-style-type: none;
             border-bottom: 0;
             text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
@@ -162,7 +165,7 @@ header {
         transition: width 500ms, left 500ms;
     }
 
-    .cross-link .active a>span:after {
+    .cross-link .current-menu-item a>span:after {
         width: 120%;
         left: -10%;
         color: $yellow;
@@ -207,6 +210,8 @@ header {
 
             .text {
                 font-size: 0.8em;
+                padding-top: 6px;
+                letter-spacing: 2px;
 
                 li.spaced {
                     padding-left: 0.3em;
